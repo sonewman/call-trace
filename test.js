@@ -49,4 +49,19 @@ desc('call-trace')
   process.nextTick(function () {
     a();
   });
+})
+.it('should log output if passed arguments that are truthy', function (t) {
+  // temporarily stub console.log
+  t.stub(console, 'log');
+  t.expect(console.log.notCalled);
+  trace(true, true);
+  t.expect(console.log.calledOnce);
+  t.end();
+})
+.it('should not log output if passing arguments which are falsey', function (t) {
+  t.stub(console, 'log');
+  t.expect(console.log.notCalled);
+  trace(true, false);
+  t.expect(console.log.notCalled);
+  t.end();
 });

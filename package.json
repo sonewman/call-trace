@@ -1,0 +1,22 @@
+{
+  "name": "call-trace",
+  "version": "0.0.0",
+  "description": "trace call stack from location",
+  "main": "index.js",
+  "scripts": {
+    "test": "macchiato test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonewman/call-trace.git"
+  },
+  "author": "Sam Newman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sonewman/call-trace/issues"
+  },
+  "homepage": "https://github.com/sonewman/call-trace#readme",
+  "devDependencies": {
+    "macchiato": "^4.6.0"
+  }
+}
